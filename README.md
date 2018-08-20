@@ -1,8 +1,5 @@
 # ENMwork
-
-ENMwork
 ============
-
 Overview
 ========
 

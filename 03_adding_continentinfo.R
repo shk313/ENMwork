@@ -2963,35 +2963,35 @@ Chikungunya.Asia$disease<-"Chikungunya"
 #Australia, number 3
 Chikungunya.Australia<-rbind(A.taylori_australia, A.neoafricanus_australia, A.luteocephalus_australia, A.furcifer_australia, A.aegypti_australia, A.africanus_australia, An.stephensi_australia, A.vittatus_australia, A.albopictus_australia)
 Chikungunya.Australia.list<-list(A.taylori_australia, A.neoafricanus_australia, A.luteocephalus_australia, A.furcifer_australia, A.aegypti_australia, A.africanus_australia, An.stephensi_australia, A.vittatus_australia, A.albopictus_australia)
-names(Chikungunya.Australia.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopitus")
+names(Chikungunya.Australia.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopictus")
 Chikungunya.Australia.list 
 Chikungunya.Australia$disease<-"Chikungunya"
 
 #N_America, number 4
 Chikungunya.N_America<-rbind(A.taylori_n.america, A.neoafricanus_n.america, A.luteocephalus_n.america, A.furcifer_n.america, A.aegypti_n.america, A.africanus_n.america, An.stephensi_n.america, A.vittatus_n.america, A.albopictus_n.america)
 Chikungunya.N_America.list<-list(A.taylori_n.america, A.neoafricanus_n.america, A.luteocephalus_n.america, A.furcifer_n.america, A.aegypti_n.america, A.africanus_n.america, An.stephensi_n.america, A.vittatus_n.america, A.albopictus_n.america)
-names(Chikungunya.N_America.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopitus")
+names(Chikungunya.N_America.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopictus")
 Chikungunya.N_America.list 
 Chikungunya.N_America$disease<-"Chikungunya"
 
 #Oceania, number 5
 Chikungunya.Oceania<-rbind(A.taylori_oceania, A.neoafricanus_oceania, A.luteocephalus_oceania, A.furcifer_oceania, A.aegypti_oceania, A.africanus_oceania, An.stephensi_oceania, A.vittatus_oceania, A.albopictus_oceania)
 Chikungunya.Oceania.list<-list(A.taylori_oceania, A.neoafricanus_oceania, A.luteocephalus_oceania, A.furcifer_oceania, A.aegypti_oceania, A.africanus_oceania, An.stephensi_oceania, A.vittatus_oceania, A.albopictus_oceania)
-names(Chikungunya.Oceania.list)<-c("A_taylori", "A_neoaficanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopitus")
+names(Chikungunya.Oceania.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopictus")
 Chikungunya.Oceania.list
 Chikungunya.Oceania$disease<-"Chikungunya"
 
 #S_America, number 6
 Chikungunya.S_America<-rbind(A.taylori_s.america, A.neoafricanus_s.america, A.luteocephalus_s.america, A.furcifer_s.america, A.aegypti_s.america, A.africanus_s.america, An.stephensi_s.america, A.vittatus_s.america, A.albopictus_s.america)
 Chikungunya.S_America.list<-list(A.taylori_s.america, A.neoafricanus_s.america, A.luteocephalus_s.america, A.furcifer_s.america, A.aegypti_s.america, A.africanus_s.america, An.stephensi_s.america, A.vittatus_s.america, A.albopictus_s.america)
-names(Chikungunya.S_America.list)<-c("A_taylori", "A_neoasianus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopitus")
+names(Chikungunya.S_America.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopictus")
 Chikungunya.S_America.list 
 Chikungunya.S_America$disease<-"Chikungunya"
 
 #Europe, number 8
 Chikungunya.Europe<-rbind(A.taylori_europe, A.neoafricanus_europe, A.luteocephalus_europe, A.furcifer_europe, A.aegypti_europe, A.africanus_europe, An.stephensi_europe, A.vittatus_europe, A.albopictus_europe)
 Chikungunya.Europe.list<-list(A.taylori_europe, A.neoafricanus_europe, A.luteocephalus_europe, A.furcifer_europe, A.aegypti_europe, A.africanus_europe, An.stephensi_europe, A.vittatus_europe, A.albopictus_europe)
-names(Chikungunya.Europe.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopitus")
+names(Chikungunya.Europe.list)<-c("A_taylori", "A_neoafricanus", "A_luteocephalus", "A_furcifer", "A_aegypti", "A_africanus", "An_stephensi", "A_vittatus", "A_albopictus")
 Chikungunya.Europe.list 
 Chikungunya.Europe$disease<-"Chikungunya"
 

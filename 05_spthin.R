@@ -57,7 +57,7 @@ thin(Chikungunya.africa,lat.col="decimalLatitude",long.col="decimalLongitude",sp
 thin(Chikungunya.Eurasia,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thin_eurasia", verbose=T,write.log.file=F)
 thin(Chikungunya.Oceania.c,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thin_oceania", verbose=T,write.log.file=F)
 thin(Chikungunya.S_America,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thin_samerica", verbose=T,write.log.file=F)
-thin(Chikungunya.N_America,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thin_namerica", verbose=T,write.log.file=F)
+thin(Chikungunya.N_America,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thin_namerica_new", verbose=T,write.log.file=F)
 
 
 #will show all in environment

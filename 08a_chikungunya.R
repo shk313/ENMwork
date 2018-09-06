@@ -2,7 +2,7 @@ library(dismo)
 library(rJava)
 #Chikungunya
 #Environment layers africa
-<<<<<<< HEAD
+
 Af_chik_bio1<-raster("E:/ENMs/Climate Data/Chikungunya/chik/africa/bio2.tif")
 Af_chik_bio2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/africa/bio4.tif")
 Af_chik_bio3<-raster("E:/ENMs/Climate Data/Chikungunya/chik/africa/bio8.tif")
@@ -17,22 +17,6 @@ Af_chik_lc2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/africa/farm.tif")
 Af_chik_lc3<-raster("E:/ENMs/Climate Data/Chikungunya/chik/africa/urban.tif")
 
 environmentlayersAf_chik<-stack(Af_chik_bio1, Af_chik_bio2, Af_chik_bio3, Af_chik_bio4, Af_chik_bio5, Af_chik_bio6, Af_chik_bio7, Af_chik_bio8, Af_chik_bio9, Af_chik_lc3, Af_chik_lc1, Af_chik_lc2)
-=======
-Af_chik_bio1<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio2.tif")
-Af_chik_bio2<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio4.tif")
-Af_chik_bio3<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio8.tif")
-Af_chik_bio4<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio9.tif")
-Af_chik_bio5<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio15.tif")
-Af_chik_bio6<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio16.tif")
-Af_chik_bio7<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio17.tif")
-Af_chik_bio8<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio18.tif")
-Af_chik_bio9<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/bio19.tif")
-Af_chik_lc1<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/flood.tif")
-Af_chik_lc2<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/farm.tif")
-Af_chik_lc3<-raster("E:/ENMS/Climate Data/Chikungunya/chik/africa/urban.tif")
-
-environmentlayersAf_chik<-stack(Af_chik_bio1, Af_chik_bio2, Af_chik_bio3, Af_chik_bio4, Af_chik_bio5, Af_chik_bio6, Af_chik_bio7, Af_chik_bio8, Af_chik_bio9, Af_chik_lc3)
->>>>>>> be150331af2f04de8f779f6c074f952b51032ff0
 
 
 #occurence data
@@ -261,7 +245,6 @@ Chik_Africa2.maps<-predict(
 plot(Chik_Africa2.maps)
 points(chik_Africa_subset, pch=19, cex=0.1)
 
-<<<<<<< HEAD
 writeRaster(Chik_Africa2.maps, filename="chikaf.tif", overwrite=TRUE)
 
 #--------------------------------------------------------------------------
@@ -283,29 +266,9 @@ environmentlayersEur_chik<-stack(Eur_chik_bio1, Eur_chik_bio2, Eur_chik_bio3, Eu
 
 ##occurrence data
 chik_Eurasia<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Eurasia_THIN.csv", header = T)
-=======
-writeRaster(Chik_Africa2.maps, filename="chikaf.tif")
-
-#--------------------------------------------------------------------------
-#Environment layers Eurasia
-Eur_chik_bio1<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio2.tif")
-Eur_chik_bio2<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio4.tif")
-Eur_chik_bio3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio8.tif")
-Eur_chik_bio4<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio9.tif")
-Eur_chik_bio5<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio15.tif")
-Eur_chik_bio6<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio16.tif")
-Eur_chik_bio7<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio17.tif")
-Eur_chik_bio8<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio18.tif")
-Eur_chik_bio9<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/bio19.tif")
-Eur_chik_lc3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/eurasia/flood.tif")
-
-environmentlayersEur_chik<-stack(Eur_chik_bio1, Eur_chik_bio2, Eur_chik_bio3, Eur_chik_bio4, Eur_chik_bio5, Eur_chik_bio6, Eur_chik_bio7, Eur_chik_bio8, Eur_chik_bio9, Eur_chik_lc3)
-
-##occurrence data
-chik_Eurasia<-read.csv("Chik_Eurasia_THIN.csv", header = T)
->>>>>>> be150331af2f04de8f779f6c074f952b51032ff0
 chik_Eurasia_subset<-subset(chik_Eurasia, select = c(decimalLongitude, decimalLatitude))
 
+#--------------------------------------------------------------------------
 
 #chik model Eurasia
 chik_Eurasia.maxent<-maxent(x=environmentlayersEur_chik, p=chik_Eurasia_subset, nbg = 10000, args=c(
@@ -440,7 +403,7 @@ Chik_Eurasia_prediction1.maps<-predict(
 plot(Chik_Eurasia_prediction1.maps)
 points(chik_Eurasia_subset, pch=19, cex=0.1)
 
-writeRaster(Chik_Eurasia_prediction1.maps, filename="chikeur.tif")
+writeRaster(Chik_Eurasia_prediction1.maps, filename="chikeur.tif", overwrite = TRUE)
 
 #plotting Chik predicted from Africa on Eurasia 2.25 no cv
 Chik_Eurasia_prediction2.maps<-predict(
@@ -459,7 +422,7 @@ Chik_Eurasia_prediction2.maps<-predict(
 plot(Chik_Eurasia_prediction2.maps)
 points(chik_Eurasia_subset, pch=19, cex=0.1)
 
-writeRaster(Chik_Eurasia_prediction2.maps, filename="chikeur_pr.tif")
+writeRaster(Chik_Eurasia_prediction2.maps, filename="chikeur_pr.tif", overwrite = TRUE)
 
 #extract AUC from projection
 AUC_chik_eurasia<-projAUC(test.coords=chik_Eurasia_subset, proj.rast=Chik_Eurasia_prediction2.maps, bg.n=10000, return.bg=F, return.curve=F)
@@ -486,11 +449,11 @@ chikeurasia_correlation
 
 #--------------------------------------------------------------------------
 #Environment layers americas
-<<<<<<< HEAD
+
 Am_chik_bio1<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio2.tif")
 Am_chik_bio2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio4.tif")
 Am_chik_bio3<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio8.tif")
-Am_chik_bio4<-raster("E:/ENMsClimate Data/Chikungunya/chik/americas/bio9.tif")
+Am_chik_bio4<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio9.tif")
 Am_chik_bio5<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio15.tif")
 Am_chik_bio6<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio16.tif")
 Am_chik_bio7<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/bio17.tif")
@@ -501,23 +464,10 @@ Am_chik_lc2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/farm.tif")
 Am_chik_lc1<-raster("E:/ENMs/Climate Data/Chikungunya/chik/americas/urban.tif")
 
 environmentlayersAm_chik<-stack(Am_chik_bio1, Am_chik_bio2, Am_chik_bio3, Am_chik_bio4, Am_chik_bio5, Am_chik_bio6, Am_chik_bio7, Am_chik_bio8, Am_chik_bio9, Am_chik_lc3, Am_chik_lc2, Am_chik_lc1)
-=======
-Am_chik_bio1<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio2.tif")
-Am_chik_bio2<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio4.tif")
-Am_chik_bio3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio8.tif")
-Am_chik_bio4<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio9.tif")
-Am_chik_bio5<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio15.tif")
-Am_chik_bio6<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio16.tif")
-Am_chik_bio7<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio17.tif")
-Am_chik_bio8<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio18.tif")
-Am_chik_bio9<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/bio19.tif")
-Am_chik_lc3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/americas/flood.tif")
 
-environmentlayersAm_chik<-stack(Am_chik_bio1, Am_chik_bio2, Am_chik_bio3, Am_chik_bio4, Am_chik_bio5, Am_chik_bio6, Am_chik_bio7, Am_chik_bio8, Am_chik_bio9, Am_chik_lc3)
->>>>>>> be150331af2f04de8f779f6c074f952b51032ff0
 
 ##occurrence data
-chik_americas<-read.csv("Chik_Americas_THIN.csv", header = T)
+chik_americas<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Americas_THIN.csv", header = T)
 chik_americas_subset<-subset(chik_americas, select = c(decimalLongitude, decimalLatitude))
 
 
@@ -654,7 +604,7 @@ Chik_Americas_prediction1.maps<-predict(
 plot(Chik_Americas_prediction1.maps)
 points(chik_americas_subset, pch=19, cex=0.1)
 
-writeRaster(Chik_Americas_prediction1.maps, filename="chikam.tif")
+writeRaster(Chik_Americas_prediction1.maps, filename="chikam.tif", overwrite = TRUE)
 
 #plotting Chik predicted from Africa on Americas 2.25 no cv
 Chik_Americas_prediction2.maps<-predict(
@@ -673,7 +623,7 @@ Chik_Americas_prediction2.maps<-predict(
 plot(Chik_Americas_prediction2.maps)
 points(chik_americas_subset, pch=19, cex=0.1)
 
-writeRaster(Chik_Americas_prediction2.maps, filename="chikam_pr.tif")
+writeRaster(Chik_Americas_prediction2.maps, filename="chikam_pr.tif", overwrite = TRUE)
 
 #extract AUC from projection
 AUC_chik_americas<-projAUC(test.coords=chik_americas_subset, proj.rast=Chik_Americas_prediction2.maps, bg.n=10000, return.bg=F, return.curve=F)
@@ -700,7 +650,7 @@ chikamericas_correlation
 
 #--------------------------------------------------------------------------
 #Environment layers oceania
-<<<<<<< HEAD
+
 O_chik_bio1<-raster("E:/ENMs/Climate Data/Chikungunya/chik/oceania/oceania/bio2.tif")
 O_chik_bio2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/oceania/oceania/bio4.tif")
 O_chik_bio3<-raster("E:/ENMs/Climate Data/Chikungunya/chik/oceania/oceania/bio8.tif")
@@ -715,23 +665,9 @@ O_chik_lc2<-raster("E:/ENMs/Climate Data/Chikungunya/chik/oceania/oceania/farm.t
 O_chik_lc1<-raster("E:/ENMs/Climate Data/Chikungunya/chik/oceania/oceania/urban.tif")
 
 environmentlayersO_chik<-stack(O_chik_bio1, O_chik_bio2, O_chik_bio3, O_chik_bio4, O_chik_bio5, O_chik_bio6, O_chik_bio7, O_chik_bio8, O_chik_bio9, O_chik_lc3, O_chik_lc2, O_chik_lc1)
-=======
-O_chik_bio1<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio2.tif")
-O_chik_bio2<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio4.tif")
-O_chik_bio3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio8.tif")
-O_chik_bio4<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio9.tif")
-O_chik_bio5<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio15.tif")
-O_chik_bio6<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio16.tif")
-O_chik_bio7<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio17.tif")
-O_chik_bio8<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio18.tif")
-O_chik_bio9<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/bio19.tif")
-O_chik_lc3<-raster("~/Documents/OneDrive/Documents/YEAR 4/Disso/Climate Data/Chikungunya/chik/oceania/oceania/flood.tif")
-
-environmentlayersO_chik<-stack(O_chik_bio1, O_chik_bio2, O_chik_bio3, O_chik_bio4, O_chik_bio5, O_chik_bio6, O_chik_bio7, O_chik_bio8, O_chik_bio9, O_chik_lc3)
->>>>>>> be150331af2f04de8f779f6c074f952b51032ff0
 
 ##occurrence data
-chik_oceania<-read.csv("Chik_Oceania_THIN.csv", header = T)
+chik_oceania<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Oceania_THIN.csv", header = T)
 chik_oceania_subset<-subset(chik_oceania, select = c(decimalLongitude, decimalLatitude))
 
 
@@ -889,7 +825,7 @@ Chik_Oceania_prediction2.maps<-predict(
 plot(Chik_Oceania_prediction2.maps)
 points(chik_oceania_subset, pch=19, cex=0.1)
 
-writeRaster(Chik_Oceania_prediction2.maps, filename="chikoce_pr.tif")
+writeRaster(Chik_Oceania_prediction2.maps, filename="chikoce_pr.tif", overwrite = TRUE)
 
 #extract AUC from projection
 AUC_chik_oceania<-projAUC(test.coords=chik_oceania_subset, proj.rast=Chik_Oceania_prediction2.maps, bg.n=10000, return.bg=F, return.curve=F)

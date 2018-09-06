@@ -47,11 +47,13 @@ thin(YellowF_Americas,lat.col="decimalLatitude",long.col="decimalLongitude",spec
 Chik_Oceania<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Oceania_THIN.csv")
 Chik_Africa<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Africa_THIN.csv")
 Chik_Eurasia<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Eurasia_THIN.csv")
-Chik_N_America<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Namerica_THIN.csv")
+Chik_N_America<-read.csv("J:/Gitlab/ENMwork/Thinned_data/chik_namerica_new.csv")
 Chik_S_America<-read.csv("J:/Gitlab/ENMwork/Thinned_data/Chik_Samerica_THIN.csv")
 
-Chik_Americas<-rbind(Chik_N_America, Chik_S_America)
-thin(Chik_Americas,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thintest", verbose=T,write.log.file=F)
+
+Chik_Americas_bind<-rbind(Chik_N_America, Chik_S_America)
+thin(Chik_Americas_bind,lat.col="decimalLatitude",long.col="decimalLongitude",spec.col="disease",thin.par=50,reps=1,write.files=T,out.dir=getwd(),out.base="thintest", verbose=T,write.log.file=F)
+Chik_americas <- read.csv("J:/Gitlab/ENMwork/thintest_thin1_new.csv")
 #-------------------------------------------------------------------------------------------
 
 #Dengue

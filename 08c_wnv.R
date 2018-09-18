@@ -657,7 +657,7 @@ O_WNV_lc1<-raster("E:/ENMs/Climate Data/WNV/WNV/oceania/oceania/urban.tif")
 environmentlayersO_WNV<-stack(O_WNV_bio1, O_WNV_bio2, O_WNV_bio3, O_WNV_bio4, O_WNV_bio5, O_WNV_bio6, O_WNV_bio7, O_WNV_bio8, O_WNV_bio9, O_WNV_lc3, O_WNV_lc2, O_WNV_lc1)
 
 ##occurrence data
-WNV_oceania<-read.csv("J:/Gitlab/ENMwork/Thinned_data/WNV.oceania.THIN.csv", header = T)
+WNV_oceania<-read.csv("J:/Gitlab/ENMwork/Thinned_data/WNV_Oceania_THIN.csv", header = T)
 WNV_oceania_subset<-subset(WNV_oceania, select = c(decimalLongitude, decimalLatitude))
 
 

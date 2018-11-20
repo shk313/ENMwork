@@ -548,13 +548,16 @@ dengueaf_ss<-subset(dengueaf, select=c(x,y))
 dengueafpred<-sampleRandom(DE2Africa.maps, 10000, xy=T)
 dengueafpred_ss<-subset(dengueafpred, select=c(x,y))
 
-dengueafricavalues<-extract(environmentlayersAf, dengueaf_ss)
+dengueafricavalues<-extract(environmentlayersAf, dengueaf_ss, method = 'simple')
 dengueafricapredvalues<-extract(environmentlayersAf, dengueafpred_ss)
 dengue_africa_corvalues<-rbind(dengueafricavalues, dengueafricapredvalues)
 dengue_africa_corvalues
-dengueafrica_correlation<-cor(dengue_africa_corvalues)
+
+d_africa_cor <- cor(dengueafricavalues, dengueafricapredvalues, method = "spearman")
+
+dengueafrica_correlation<-cor(dengue_africa_corvalues, method = c("pearson", "spearman"))
 dengueafrica_correlation
-dengueafrica_correlation1<-cor.test(dengueafricavalues, dengueafricapredvalues)
+dengueafrica_correlation1<-cor.test(dengueafricavalues, dengueafricapredvalues, method = "spearman")
 dengueafrica_correlation1
 
 #---------------------------------------------------------------------------------------

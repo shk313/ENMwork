@@ -78,9 +78,26 @@ Z_Africa.maps<-predict(
 plot(Z_Africa.maps)
 points(Zika_Africa_subset, pch=19, cex=0.1)
 
+################### checking outputs #########
+#-------------------------------------
+xx<-predict(
+  
+  object=ZA3.1.maxent,
+  x=environmentlayersAf_Zik,
+  format='ascii',
+  progress='text',
+  args=c(outputFormat='logistic'),
+  prj=TRUE, 
+  keepres=TRUE,
+  na.rm=TRUE,
+  overwrite=TRUE
+)
 
+plot(xx)
+
+-------------------------------------
 #--------------------------------------------------------------------------
-#--------------------------------------------------------------------------
+############################################
 
 #changing betamultiplier: 0.25
 ZA1.maxent<-maxent(x=environmentlayersAf_Zik, p=Zika_Africa_subset, nbg = 10000, args=c(
@@ -120,6 +137,18 @@ ZA3.maxent<-maxent(x=environmentlayersAf_Zik, p=Zika_Africa_subset, nbg = 10000,
   'addallsamplestobackground=FALSE'
 ))  
 ZA3.maxent
+
+#1.25 without CV
+ZA3.1.maxent<-maxent(x=environmentlayersAf_Zik, p=Zika_Africa_subset, nbg = 10000, args=c(
+  'betaMultiplier=1.25',
+  "DefaultPrevalence=0.5",
+  'autoFeature=TRUE',
+  'maximumIterations=500',
+  'addsamplestobackground=TRUE',
+  'addallsamplestobackground=FALSE'
+))  
+ZA3.1.maxent
+
 
 #changing betamultiplier: 1.75
 ZA4.maxent<-maxent(x=environmentlayersAf_Zik, p=Zika_Africa_subset, nbg = 10000, args=c(
@@ -334,7 +363,7 @@ points(Zika_Eurasia_subset, pch=19, cex=0.1)
 #plotting Zika predicted from Africa on Eurasia
 Zika_Eurasia_prediction.maps<-predict(
   
-  object=Zika_Africa.maxent,
+  object=ZA4.maxent,
   x=environmentlayersEur_Zik,
   format='ascii',
   progress='text',
@@ -351,7 +380,7 @@ points(Zika_Eurasia_subset, pch=19, cex=0.1)
 
 Z_Eurasia_prediction.maps<-predict(
   
-  object=Z_Africa.maxent,
+  object=ZA3.1.maxent,
   x=environmentlayersEur_Zik,
   format='ascii',
   progress='text',
@@ -407,7 +436,7 @@ Zika_Eurasia_prediction1.maps<-predict(
 plot(Zika_Eurasia_prediction1.maps)
 points(Zika_Eurasia_subset, pch=19, cex=0.1)
 
-writeRaster(Zika_Eurasia_prediction1.maps, filename="zikaeur.tif")
+writeRaster(Zika_Eurasia_prediction1.maps, filename="zikaeur.tif", overwrite = TRUE)
 
 #plotting Zika predicted from Africa on Eurasia 1.75 no cv
 Zika_Eurasia_prediction2.maps<-predict(
@@ -426,7 +455,7 @@ Zika_Eurasia_prediction2.maps<-predict(
 plot(Zika_Eurasia_prediction2.maps)
 points(Zika_Eurasia_subset, pch=19, cex=0.1)
 
-writeRaster(Zika_Eurasia_prediction2.maps, filename = "zikaeur_pr.tif")
+writeRaster(Zika_Eurasia_prediction2.maps, filename = "zikaeur_pr.tif", overwrite = TRUE)
 
 #extract AUC from projection
 AUC_zika_eurasia<-projAUC(test.coords=Zika_Eurasia_subset, proj.rast=Zika_Eurasia_prediction2.maps, bg.n=10000, return.bg=F, return.curve=F)

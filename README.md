@@ -4,6 +4,8 @@
 Overview
 ========
 
+Undergraduate masters project
+
 Ecological Niche Models (ENMs) are popular tools used to predict current and future distributions of species.
 Predicting the distribution of vectors of infectious diseases is a particularly pressing concern for public health
 globally as changes in climate, land-use and human populations are provoking these species to expand and intensify geographically.
